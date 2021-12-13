@@ -13,6 +13,7 @@ use Auth;
 class PaperAdd extends Component
 {
     public $title;
+    public $abstract;
     public $manuscriptFile;
     use WithFileUploads;
     
@@ -39,6 +40,7 @@ class PaperAdd extends Component
         ]);
 
         $manuscript = Manuscript_Sympozia::where('paper_code', $paper_code)->first();
+        
         $filename = $this->manuscriptFile->storeAs('submitedManuscript', $paper_code.'-manuscript.pdf', 'public');
         $fileType = FileType_sympozia::where('code', 'REV')->first()->id;
         $file =[

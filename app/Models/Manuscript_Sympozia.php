@@ -12,6 +12,10 @@ class Manuscript_Sympozia extends Model
     protected $table = 'sympozia_manuscript';
 
     public function file(){
-        return $this->hasMany(ManuscriptFile_sympozia::class, 'manuscript_id', 'id');
+        return $this->hasMany(ManuscriptFile_Sympozia::class, 'manuscript_id', 'id');
+    }
+
+    public function author(){
+        return $this->hasMany(ManuscriptAuthor_Sympozia::class, 'manuscript_id', 'id');
     }
 }
