@@ -34,7 +34,7 @@
                                                 </small>
                                             </td>
                                             <td width='5%'>
-                                                <a class="btn btn-sm btn-danger">Assign Reviewer</a>
+                                                <button class="btn btn-sm btn-danger d-block mx-auto" x-on:click="open = !open" x-data="{ open: false }" x-html="open ? '{{ DB::table('users')->where('id', DB::table('role_user')->where('role_id', 8)->value('user_id'))->value('name') }}' : 'Assign Reviewer'"></button>
                                             </td>
                                         </tr>
                                     @endforeach
