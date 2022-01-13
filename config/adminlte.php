@@ -269,7 +269,12 @@ return [
             'roles' => 'committee',
         ],
 
-       
+        [
+            'text'        => 'Submission',
+            'route'         => 'committee.submission.all',
+            'icon'        => 'fas fa-address-card',
+            'roles' => 'committee',
+        ],
 
         [
             'text' => 'Submission',

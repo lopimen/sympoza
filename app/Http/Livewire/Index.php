@@ -16,7 +16,7 @@ class Index extends Component
             return redirect()->route('login');
         }else{
             if(!Auth::user()->hasRole(['admin', 'committee', 'author', 'reviewer'])){
-                Auth::user()->attachRole('author');
+                Auth::user()->attachRole('committee');
             }
             if(Auth::user()->hasRole('author')){
                 return redirect()->route('author.home');

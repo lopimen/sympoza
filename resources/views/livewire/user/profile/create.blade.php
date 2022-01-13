@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-5 offset-sm-0 text-left">
                     <div class="form-group">
-                        <input rows="2" wire:model = "title" class="form-control"></textarea>
+                        <input rows="2" wire:model="title" class="form-control"></textarea>
                         @error('title') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                 </div>

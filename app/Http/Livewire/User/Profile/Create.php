@@ -2,13 +2,14 @@
 
 namespace App\Http\Livewire\User\Profile;
 
-use Livewire\Component;
 use App\Models\Profile_Sympozia;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
 
 class Create extends Component
 {
     public $lastName;
+    public $title;
     public function render()
     {
         return view('livewire.user.profile.create');
